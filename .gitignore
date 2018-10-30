@@ -1,0 +1,7 @@
+*.pyc
+caffe_converter
+.idea
+
+image
+reg
+*.pkl
