@@ -130,7 +130,7 @@ def checkPKl():
     fid = open("img1W.pkl","rb")
     # fid = open("imgRGB.pkl","rb")
     # save_dir = "D:/data/tt/reg/1027"
-    save_dir = "D:/data/tt/reg/1029_1W"
+    save_dir = "D:/data/tt/reg/1031_1W"
     container = pkl.load(fid)
     print container.__len__()
     lightcount = 0
@@ -153,7 +153,7 @@ def checkPKl():
             avr_light = (mean_b+mean_g+mean_r)/3.
             min_light = min(mean_b, mean_g, mean_r)
             max_light = max(mean_b, mean_g, mean_r)
-            if avr_light < 70:
+            if avr_light < 60:
                 newPath = os.path.join(save_dir, "dark")
             elif (avr_light>220):
                 newPath = os.path.join(save_dir, "light")
@@ -174,5 +174,5 @@ def checkPKl():
     # pkl.dump(container,outPut,protocol=2)
     # outPut.close()
 
-# checkPKl()
-demo_checkill()
+checkPKl()
+# demo_checkill()
